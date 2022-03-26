@@ -1,0 +1,112 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-container {
+  width: 600px;
+  margin: 30px auto 0;
+  background-color: #f6f6f6;
+  .add-task {
+    padding: 15px;
+    background-color: #009688;
+    position: relative;
+    input {
+      display: inline-block;
+      padding: 10px 15px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      width: calc(100% - 15px);
+      color: #fff;
+      font-size: 20px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .plus {
+      position: absolute;
+      height: 43px;
+      width: 43px;
+      background-color: #fff;
+      right: 12px;
+      border-radius: 50%;
+      line-height: 43px;
+      text-align: center;
+      color: #009688;
+      cursor: pointer;
+      font-size: 38px;
+      transition: transform 0.3s;
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .tasks-content {
+    padding: 15px;
+    .no-tasks-message {
+      color: #777;
+      font-size: 15px;
+    }
+    & > span {
+      display: block;
+      background-color: #fff;
+      padding: 10px;
+    }
+    & > span:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .task-box {
+    .delete {
+      float: right;
+      background-color: #e91e63;
+      padding: 4px 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.finished {
+  text-decoration: line-through;
+}
+
+.task-stats {
+  overflow: hidden;
+  margin: 10px auto;
+  width: 600px;
+  font-size: 12px;
+  .tasks-count,
+  .tasks-completed {
+    width: 50%;
+    padding: 10px;
+    span {
+      color: #fff;
+      padding: 1px 5px;
+      font-size: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  }
+  .tasks-count {
+    float: left;
+    span {
+      background-color: #e91e63;
+    }
+  }
+  .tasks-completed {
+    float: right;
+    text-align: right;
+    span {
+      background-color: #03a9f4;
+    }
+  }
+}

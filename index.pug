@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    include includes/head.pug
+  body
+    .todo-container
+      .add-task
+        input.text
+        span.plus +
+      .tasks-content
+        span.no-tasks-message No tasks to show
+    .task-stats
+      .tasks-count Tasks <span>0</span>
+      .tasks-completed Completed <span>0</span>
+
+  script(src="../js/master.js")
