@@ -97,7 +97,7 @@ function createNoTasks() {
   msgSpan.appendChild(msgText);
 
   // add class to message span
-  msgSpan.className = "no-task-message";
+  msgSpan.className = "no-tasks-message";
 
   // Append the message span element to the task container
   tasksContainer.appendChild(msgSpan);
