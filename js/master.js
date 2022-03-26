@@ -13,9 +13,7 @@ window.onload = function () {
 // Adding the task
 theAddButton.onclick = function () {
   // Check if input is empty or not
-  if (theInput.value === "") {
-    console.log("No value");
-  } else {
+  if (theInput.value !== "") {
     let noTasksMsg = document.querySelector(".no-tasks-message");
 
     // Check if span with no tasks message if exist

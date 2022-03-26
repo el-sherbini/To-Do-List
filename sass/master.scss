@@ -1,5 +1,14 @@
+$main-color: #2980f2;
+
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: $main-color;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
@@ -9,20 +18,24 @@ body {
 }
 
 .todo-container {
-  width: 600px;
-  margin: 30px auto 0;
-  background-color: #f6f6f6;
+  width: 40%;
+  border-radius: 10px;
+  padding: 30px;
+
+  .title {
+    text-align: center;
+    margin: 0 0 25px;
+    color: #fff;
+  }
+
   .add-task {
-    padding: 15px;
-    background-color: #009688;
     position: relative;
     input {
       display: inline-block;
       padding: 10px 15px;
       border: none;
-      background-color: rgba(255, 255, 255, 0.3);
-      width: calc(100% - 15px);
-      color: #fff;
+      width: 100%;
+      border-radius: 5px;
       font-size: 20px;
       &:focus {
         outline: none;
@@ -32,12 +45,10 @@ body {
       position: absolute;
       height: 43px;
       width: 43px;
-      background-color: #fff;
-      right: 12px;
-      border-radius: 50%;
+      right: 0;
       line-height: 43px;
       text-align: center;
-      color: #009688;
+      color: $main-color;
       cursor: pointer;
       font-size: 38px;
       transition: transform 0.3s;
@@ -64,7 +75,7 @@ body {
   .task-box {
     .delete {
       float: right;
-      background-color: #e91e63;
+      background-color: #f24444;
       padding: 4px 10px;
       color: #fff;
       font-size: 12px;
@@ -81,32 +92,32 @@ body {
 
 .task-stats {
   overflow: hidden;
-  margin: 10px auto;
-  width: 600px;
-  font-size: 12px;
+  width: 35%;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+
   .tasks-count,
   .tasks-completed {
     width: 50%;
     padding: 10px;
+    color: #fff;
     span {
-      color: #fff;
       padding: 1px 5px;
-      font-size: 10px;
+      font-size: 12px;
       border-radius: 4px;
       font-weight: bold;
     }
   }
   .tasks-count {
-    float: left;
     span {
-      background-color: #e91e63;
+      background-color: #03a9f4;
     }
   }
   .tasks-completed {
-    float: right;
     text-align: right;
     span {
-      background-color: #03a9f4;
+      background-color: #7dbf4e;
     }
   }
 }
