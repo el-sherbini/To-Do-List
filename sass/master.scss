@@ -4,11 +4,9 @@ body {
   font-family: "Open Sans", sans-serif;
   background: linear-gradient(to right, #2b32b2, #1488cc);
   height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 * {
@@ -18,9 +16,9 @@ body {
 }
 
 .todo-container {
-  width: 40%;
-
-  .title {
+  width: 50%;
+  margin-top: 50px;
+  .todo-title {
     text-align: center;
     margin: 0 0 25px;
     color: #fff;
@@ -28,7 +26,7 @@ body {
 
   .add-task {
     position: relative;
-    input {
+    .task-text {
       display: inline-block;
       padding: 10px;
       border: none;
@@ -55,23 +53,24 @@ body {
       }
     }
   }
-  .tasks-content {
+  .tasks-container {
     padding: 20px;
     .no-tasks-message {
       color: #777;
       font-size: 15px;
     }
-    & > span {
+    & > div {
       display: block;
       background-color: #fff;
-      padding: 10px;
+      padding: 15px;
     }
-    & > span:not(:last-child) {
+    & > div:not(:last-child) {
       margin-bottom: 10px;
     }
   }
   .task-box {
     cursor: pointer;
+    border-radius: 5px;
     .delete {
       float: right;
       background-color: #f24444;
@@ -81,19 +80,23 @@ body {
       font-weight: bold;
       border-radius: 4px;
     }
+    .task-date {
+      float: right;
+      font-size: 12px;
+      margin: 5px;
+    }
   }
 }
 
-.finished {
-  text-decoration: line-through;
+.done {
+  background-color: #7dbf4e !important;
+  color: #fff !important;
 }
 
 .task-stats {
-  overflow: hidden;
-  width: 35%;
+  width: 45%;
   font-size: 15px;
   display: flex;
-  justify-content: space-between;
 
   .tasks-count,
   .tasks-completed {

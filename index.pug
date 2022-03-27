@@ -4,12 +4,12 @@ html
     include includes/head.pug
   body
     .todo-container
-      h1.title To-Do List
+      h1.todo-title To-Do List
       .add-task
-        input.text
+        input.task-text
         span.plus +
-      .tasks-content
-        span.no-tasks-message No tasks to show
+      .tasks-container
+        div.no-tasks-message No tasks to show
     .task-stats
       .tasks-count Tasks <span>0</span>
       .tasks-completed Completed <span>0</span>

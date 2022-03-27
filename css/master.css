@@ -3,7 +3,6 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#2b32b2), to(#1488cc));
   background: linear-gradient(to right, #2b32b2, #1488cc);
   height: 100vh;
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,9 +13,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 * {
@@ -27,10 +23,11 @@ body {
 }
 
 .todo-container {
-  width: 40%;
+  width: 50%;
+  margin-top: 50px;
 }
 
-.todo-container .title {
+.todo-container .todo-title {
   text-align: center;
   margin: 0 0 25px;
   color: #fff;
@@ -40,7 +37,7 @@ body {
   position: relative;
 }
 
-.todo-container .add-task input {
+.todo-container .add-task .task-text {
   display: inline-block;
   padding: 10px;
   border: none;
@@ -49,7 +46,7 @@ body {
   font-size: 20px;
 }
 
-.todo-container .add-task input:focus {
+.todo-container .add-task .task-text:focus {
   outline: none;
 }
 
@@ -74,27 +71,28 @@ body {
           transform: rotate(180deg);
 }
 
-.todo-container .tasks-content {
+.todo-container .tasks-container {
   padding: 20px;
 }
 
-.todo-container .tasks-content .no-tasks-message {
+.todo-container .tasks-container .no-tasks-message {
   color: #777;
   font-size: 15px;
 }
 
-.todo-container .tasks-content > span {
+.todo-container .tasks-container > div {
   display: block;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
 }
 
-.todo-container .tasks-content > span:not(:last-child) {
+.todo-container .tasks-container > div:not(:last-child) {
   margin-bottom: 10px;
 }
 
 .todo-container .task-box {
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .todo-container .task-box .delete {
@@ -107,20 +105,23 @@ body {
   border-radius: 4px;
 }
 
-.finished {
-  text-decoration: line-through;
+.todo-container .task-box .task-date {
+  float: right;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.done {
+  background-color: #7dbf4e !important;
+  color: #fff !important;
 }
 
 .task-stats {
-  overflow: hidden;
-  width: 35%;
+  width: 45%;
   font-size: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .task-stats .tasks-count,
